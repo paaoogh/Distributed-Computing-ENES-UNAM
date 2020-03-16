@@ -4,7 +4,7 @@ PRACTICE 1 - REVISION 1
 
 ## CONTACT INFORMATION OF CONTRIBUTORS TO THE PROJECT:
 Maria Lucrecia Beltz González - <lucreciabeltz@gmail.com>  
-Paola González Hernándea - <paaoogh@gmail.com>  
+Paola González Hernández - <paaoogh@gmail.com>  
 Samuel Gomez Lara - <samuelgolara@gmail.com>  
 
 ## INTRODUCTION: Overview
