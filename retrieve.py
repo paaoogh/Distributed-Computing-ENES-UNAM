@@ -1,23 +1,16 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-#Fetching data from Twitter: credentials needed in first instance #
+#Fetching data from EONET: credentials needed in first instance   #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 
 import tweepy
 import json
-import pandas as pd
 import csv
 
 #These are the credentials
-consumer_key = ''
-consumer_token = ''
-access_key= ''
-access_token =''
+api = "" #credential
 
-#pass twitter credentials to tweepy
-authen = tweepy.OAuthHandler(consumer_key, consumer_token) 
-authen.set_access_token(access_key, access_token)
-api = tweepy.API(authen)
+#In case of MAC system uncomment following lines:
 
-trends = api.trends_place(1)
 
+#In case of Linux system uncomment following lines:
