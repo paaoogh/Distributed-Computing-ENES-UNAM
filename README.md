@@ -31,6 +31,8 @@ Run the retreive.py program for the data fetching. It will be stored in a .csv f
 In the aim of control the data access, NASA need to generate the proper developer credentials. The can be requested [here](https://api.nasa.gov). The limited downloading of data per hour and IP adress within different APIs is available with a demo key.
 
 ## DATA RETREIVING:
+Run the script retreive.py to get the files.
+
 The version with which we will be working is version 3, but version 2.1 is still available.  
 
 Downloadable APIs include: Events (which is the main data for this project - GeoJson), Categories and Layers. A further description of the data types and the meaning of what is downloaded is depicted in this [source](https://eonet.sci.gsfc.nasa.gov/docs/v3)
