@@ -19,6 +19,7 @@ Following the eXtreme Programming schema, the NASA EONET will be the data provid
 
 Tools needed:
     * Python programming language
+    * Python libraries: Json, requests, matplotlib, numpy, datetime
     * Json
     * Lighttpd
     * Visual Studio Code
@@ -28,17 +29,19 @@ Run the retreive.py program for the data fetching. It will be stored in a .csv f
 
 
 ## REQUIREMENTS:
-In the aim of control the data access, NASA need to generate the proper developer credentials. The can be requested [here](https://api.nasa.gov). The limited downloading of data per hour and IP adress within different APIs is available with a demo key.
+In the aim of control the data access, NASA need to generate the proper developer credentials. The can be requested [here](https://api.nasa.gov). The limited downloading of data per hour and IP adress within different APIs is available with a demo key. For the moment, NASA EONET is not requiring APIs credential, but may be requested in further processes.
 
 ## DATA RETREIVING:
-Run the script retreive.py to get the files.
+Run the script retreive.py to get the files. Files are not downloaded but processed into Python dictionaries.
 
 The version with which we will be working is version 3, but version 2.1 is still available.  
 
-Downloadable APIs include: Events (which is the main data for this project - GeoJson), Categories and Layers. A further description of the data types and the meaning of what is downloaded is depicted in this [source](https://eonet.sci.gsfc.nasa.gov/docs/v3)
+Downloadable APIs include: Events (which is the main data for this project - GeoJson), Categories and Layers. A further description of the data types and the meaning of what is downloaded is depicted in this [source](https://eonet.sci.gsfc.nasa.gov/docs/v3). If downloaded directly into personal computer, files without any extension will be stored; in case you want to save it as .JSON, it will have to be added manually. 
 
 
 ## CONCLUSIONS:
+   1. It is very important to get to know and understand the data that you are working with in order to proceed to diverse steps. This includes (and is not limited to) understanding the format, data types and restrictions (such as legal protection of data). In this case, the first challenge faced was working and processing with no-extension files, followed by the arrangements of the data provided by EONET.
+   
 Several stages will allow us to generate comments within this section and will be submited when apropiate.
 
 ## BIBLIOGRAPHY AND REFERENCES:
