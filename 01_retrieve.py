@@ -1,12 +1,10 @@
 #!/usr/bin/env Python3
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-#Fetching data from EONET: credentials needed in first instance   #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
 #Important libraries at the top. For future usage libraries will be commented with a (*)
 import json
 import requests
+import sys
+import subprocess
 #--------*-----
 from datetime import datetime 
 import matplotlib
@@ -14,8 +12,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 api = "" #credential
-response_events = requests.get("https://eonet.sci.gsfc.nasa.gov/api/v3/events/geojson?limit=5&days=20&source=InciWeb&status=open")
+response_events = requests.get("https://eonet.sci.gsfc.nasa.gov/api/v3/events")
 data = response_events.json()
 
-events_keys = data.keys()
-events_vals = data.values()
+events_list = data['events']
+
+print(events_list[1])
+for event in events_list:
+    filename = event.get('id') + '.json'
+    f = open(filename, "w")
+    output = subprocess.run(["scp",filename,"paolagh@132.247.186.67:public_html/static"])
+    output = subprocess.run(["mv",filename,"json/backup/"])
+
