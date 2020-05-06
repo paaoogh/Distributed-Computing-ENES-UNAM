@@ -1,4 +1,4 @@
-PRACTICE 1 - REVISION 1    
+PRACTICE 2 - REVISION 1    
 # WORLD EVENT CURATION PLOT SYSTEM
 
 
@@ -14,29 +14,33 @@ Even though the definition of what a natural event is could be intuitive, the la
 
 This project aims to make a distributed system that helps the understanding of the above mentioned by showing graphs and retreiving NASA open data within a period of time.
 
-### Technique and Methodolgy
+### Technique and Methodology
 Following the eXtreme Programming schema, the NASA EONET will be the data provider that will allow the personal computer to send the data to a server. The final client will be able to get the data needed in the form of diverse graphs.  
 
 Tools needed:
     * Python programming language
-    * Python libraries: Json, requests, matplotlib, numpy, datetime
+    * Python libraries: json, requests, sys, subprocess
     * Json
-    * Lighttpd
+    * SCP protocol 
     * Visual Studio Code
-    * Other python libraries will be updated as the project moves forward.
+    * Other python libraries will be updated as the project moves forward. Currently looking forward for the plotting: matplotlib, mysql.connector
+    *MySQL
+    *Usage of an external server in order to process and plot the data
 
-Run the retreive.py program for the data fetching. It will be stored in a .csv file that will be processed later. Conection with the API is stablished within the program.
+Run the 01_retreive.py program for the data fetching. More requirements information and storage provided in sections below.
 
 
 ## REQUIREMENTS:
-In the aim of control the data access, NASA need to generate the proper developer credentials. The can be requested [here](https://api.nasa.gov). The limited downloading of data per hour and IP adress within different APIs is available with a demo key. For the moment, NASA EONET is not requiring APIs credential, but may be requested in further processes.
+In the aim of control the data access, NASA need to generate the proper developer credentials. The can be requested [here](https://api.nasa.gov). The limited downloading of data per hour and IP address within different APIs is available with a demo key. For the moment, NASA EONET is not requiring APIs credential, but may be requested in further processes as requested from de NASA.
 
 ## DATA RETREIVING:
-Run the script retreive.py to get the files. Files are not downloaded but processed into Python dictionaries.
 
 The version with which we will be working is version 3, but version 2.1 is still available.  
 
-Downloadable APIs include: Events (which is the main data for this project - GeoJson), Categories and Layers. A further description of the data types and the meaning of what is downloaded is depicted in this [source](https://eonet.sci.gsfc.nasa.gov/docs/v3). If downloaded directly into personal computer, files without any extension will be stored; in case you want to save it as .JSON, it will have to be added manually. 
+Downloadable APIs include: Events (which is the main data for this project - GeoJson), Categories and Layers. A further description of the data types and the meaning of what is downloaded is depicted in this [source](https://eonet.sci.gsfc.nasa.gov/docs/v3). If downloaded directly into personal computer, files without any extension will be stored; in case you want to save it as .JSON, it will have to be added manually. Run the script 01_etreive.py to get the files. Files are not downloaded but processed into Python dictionaries using JSON:
+
+### Data description:
+Once data is downloaded, from the link: <https://eonet.sci.gsfc.nasa.gov/api/v3/events> through the *requests* (implemented with the library mentioned above), a dictionary with four keys will be stored at data, as shown in the figure bellow:
 
 
 ## CONCLUSIONS:
