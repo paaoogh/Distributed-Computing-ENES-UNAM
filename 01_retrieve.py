@@ -1,4 +1,4 @@
-#!/usr/bin/env Python3
+#!/usr/bin/env python3
 
 #Important libraries at the top. For future usage libraries will be commented with a (*)
 import json
