@@ -12,7 +12,7 @@ import subprocess
 PATH1 = "/Users/paogh/Documents/Computo_distribuido/git"
 PATH2 = "/home/vdelaluz/public_html/static/"
 
-with open(PATH+'db.json') as json_file:
+with open(PATH1+'db.json') as json_file:
         config=json.load(json_file)
 
 try:
