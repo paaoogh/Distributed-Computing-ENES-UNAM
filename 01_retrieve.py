@@ -24,5 +24,5 @@ for event in events_list:
         json.dump(event, outfile)
     print(filename)   
     output = subprocess.run(["scp",filename,"paolagh@132.247.186.67:public_html/static"])
-    output = subprocess.run(["mv",filename,"/home/paolagh/json/backup/"])
+    output = subprocess.run(["mv","/home/paolagh/public_html/static/"+filename,"/home/paolagh/json/backup/"])
 
