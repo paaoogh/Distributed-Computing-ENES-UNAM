@@ -19,10 +19,9 @@ events_list = data['events']
 
 for event in events_list:
     filename = event.get('id') + '.json'
-    filename = filename[0:5]+filename[6:]
     my_path = "paolagh@132.247.186.67:public_html/static"
     with open(filename, 'w') as outfile:
         json.dump(event, outfile)  
     output = subprocess.run(["scp",filename,"paolagh@132.247.186.67:public_html/static"])
-    output = subprocess.run(["mv",filename,"json/backup"])
+    output = subprocess.run(["mv",filename,"json/backup"+filename])
 
