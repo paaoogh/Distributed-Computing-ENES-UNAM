@@ -16,7 +16,7 @@ with open(PATH1+'/db.json') as json_file:
         config=json.load(json_file)
 
 try:
-  cnx = mysql.connector.connect(**config)
+  cnx = mysql.connector.connect(**config,auth_plugin='mysql_native_password')
   cursor = cnx.cursor()
   query1 = ("INSERT INTO events(id, title, magnitude, units, type) VALUES(%s, %s, %s, %s, %s)")
 
