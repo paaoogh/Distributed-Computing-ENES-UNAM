@@ -9,17 +9,19 @@ import glob
 import subprocess
 #_______________*_____________________
 
-PATH1 = "/home/paola/Documents/Computo_distribuido/git"
-PATH2 = "/home/paolagh/public_html/static/"
+PATH1 = "/home/paola/Documents/Computo_distribuido/git/"
+#PATH2 = "paolagh@132.247.186.67:public_html/static/"
+PATH2 = "/home/paola/Documents/Computo_distribuido/git/Distributed-Computing-ENES-UNAM/"
 
-with open(PATH1+'/db.json') as json_file:
+with open(PATH1+'db.json') as json_file:
         config=json.load(json_file)
 
 try:
   cnx = mysql.connector.connect(**config,auth_plugin='mysql_native_password')
   cursor = cnx.cursor()
-  query1 = ("INSERT INTO events(id, title, magnitude, units, type) VALUES(%s, %s, %s, %s, %s)")
+  query = ("INSERT INTO events(id, title, magnitude, units, type) VALUES(%s, %s, %s, %s, %s)")
 
+  print("hey")
   for filename in glob.glob(PATH2+"*.json"):
       print(filename)
 
@@ -30,16 +32,20 @@ try:
       data_geometry = data.get("geometry")
       columns_geometry = data_geometry.keys() #part of the columns will be on another table
 
-      id_pk = data[columns_events[0]]
-      title = data[columns_events[1]]
-      magnitude = float(data[columns_geometry[0]])
-      units = data[columns_geometry[1]]
-      geojson_type = data[columns_geometry[4]]
+      id_pk = data.get("id")
+      title = data.get("title")
+      magnitude = data_geometry.get("magnitudeValue")
+      units = data_geometry.get("magnitudeUnit")
+      geojson_type = data_geometry.get("type")
+      #title = data[columns_events[1]]
+      #magnitude = float(data[columns_geometry[0]])
+      #units = data[columns_geometry[1]]
+      #geojson_type = data[columns_geometry[4]]
 
       data_query = (id_pk, title, magnitude, units, geojson_type)
       cursor.execute(query,data_query)
       cnx.commit()
-      output = subprocess.run(["mv",filename,PATH+"backup/"])
+      #output = subprocess.run(["mv",filename,PATH+"backup/"])
 
     #Not necessary but may be scalable to more tables in database
     #description = columns_events[2]         #
@@ -63,4 +69,5 @@ except mysql.connector.Error as err:
     else:
             print(err)
 else:
-        cnx.close()
+    print("no pude")
+    cnx.close()
