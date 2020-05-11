@@ -32,7 +32,7 @@ try:
 
     id_pk = data[columns_events[0]]
     title = data[columns_events[1]]
-    magnitude = data[columns_geometry[0]]
+    magnitude = float(data[columns_geometry[0]])
     units = data[columns_geometry[1]]
     geojson_type = data[columns_geometry[4]]
 
