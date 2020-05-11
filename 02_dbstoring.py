@@ -9,7 +9,7 @@ import glob
 import subprocess
 #_______________*_____________________
 
-PATH1 = "/Users/paogh/Documents/Computo_distribuido/git"
+PATH1 = "/home/paola/Documents/Computo_distribuido/git"
 PATH2 = "/home/vdelaluz/public_html/static/"
 
 with open(PATH1+'db.json') as json_file:
@@ -49,10 +49,7 @@ try:
     #geojson_type = columns_geometry[3]      #
     #########################################
     
-
-    
-    
-    
+  
     #flux = float(root[1].text)
     #satellite = int(root[2].text)
     #data_query = (mydate, flux, satellite)
