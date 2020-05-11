@@ -10,7 +10,7 @@ import subprocess
 #_______________*_____________________
 
 PATH1 = "/home/paola/Documents/Computo_distribuido/git"
-PATH2 = "/home/vdelaluz/public_html/static/"
+PATH2 = "/home/paolagh/public_html/static/"
 
 with open(PATH1+'db.json') as json_file:
         config=json.load(json_file)
@@ -19,9 +19,8 @@ try:
   cnx = mysql.connector.connect(**config)
   cursor = cnx.cursor()
   query1 = ("INSERT INTO events(id, title, magnitude, units, type) VALUES(%s, %s, %s, %s, %s)")
-  query2 = 
 
-  for filename in glob.glob(PATH+"*.json"):
+  for filename in glob.glob(PATH2+"*.json"):
     print(filename)
 
     with open(filename,'r') as file:
