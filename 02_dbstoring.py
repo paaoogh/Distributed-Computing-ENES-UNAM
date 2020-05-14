@@ -8,10 +8,11 @@ import json
 import glob
 import subprocess
 #_______________*_____________________
+import numpy as np
 
-PATH1 = "/home/paola/Documents/Computo_distribuido/git/"
+PATH1 = "/Users/paogh/Documents/Computo_distribuido/git/"
 #PATH2 = "paolagh@132.247.186.67:public_html/static/"
-PATH2 = "/home/paola/Documents/Computo_distribuido/git/Distributed-Computing-ENES-UNAM/"
+PATH2 = "/Users/paogh/Documents/Computo_distribuido/git/Distributed-Computing-ENES-UNAM/"
 
 with open(PATH1+'db.json') as json_file:
         config=json.load(json_file)
@@ -19,47 +20,44 @@ with open(PATH1+'db.json') as json_file:
 try:
   cnx = mysql.connector.connect(**config,auth_plugin='mysql_native_password')
   cursor = cnx.cursor()
-  query = ("INSERT INTO events(id, title, magnitude, units, type) VALUES(%s, %s, %s, %s, %s)")
+  query1 = ("INSERT INTO events(id, title, description) VALUES(%s, %s, %s)")
+  query2 = ("INSERT INTO geometry(id_geom, id_events, magnitude, units, type_geo) VALUES(%s, %s, %f, %s, %s)")
 
-  print("hey")
   for filename in glob.glob(PATH2+"*.json"):
       print(filename)
 
       with open(filename,'r') as file:
           data=json.load(file)
 
-      columns_events = data.keys()
-      data_geometry = data.get("geometry")
-      columns_geometry = data_geometry.keys() #part of the columns will be on another table
 
-      id_pk = data.get("id")
+      id_events = data.get("id")
       title = data.get("title")
-      magnitude = data_geometry.get("magnitudeValue")
-      units = data_geometry.get("magnitudeUnit")
-      geojson_type = data_geometry.get("type")
-      #title = data[columns_events[1]]
-      #magnitude = float(data[columns_geometry[0]])
-      #units = data[columns_geometry[1]]
-      #geojson_type = data[columns_geometry[4]]
+      description = data.get("description")
 
-      data_query = (id_pk, title, magnitude, units, geojson_type)
-      cursor.execute(query,data_query)
+      data_query1 = (id_events, title, description)
+      cursor.execute(query1,data_query1)
+
+"""
+      increment = 1
+      data_geometry = data.get("geometry")
+      for geo in data_geometry:
+              magnitude = geo.get("magnitudeValue")
+              if magnitude == None:
+                magnitude = np.nan
+              else:
+                magnitude = float(magnitude)
+              units = geo.get("magnitudeUnit")
+              if units == None:
+                units = "NONE"
+              type_geo = geo.get("type")
+              id_geo = str(increment)+ "_" + filename[-15:-5]
+
+              data_query2 = (id_geo, id_events, magnitude, str(units), str(type_geo))
+              cursor.execute(query2,data_query2)
+              increment += 1
+"""
       cnx.commit()
       #output = subprocess.run(["mv",filename,PATH+"backup/"])
-
-    #Not necessary but may be scalable to more tables in database
-    #description = columns_events[2]         #
-    #status = columns_events[4]              #
-    #units = columns_geometry[1]             #
-    #geojson_type = columns_geometry[3]      #
-    #########################################
-
-
-    #flux = float(root[1].text)
-    #satellite = int(root[2].text)
-    #data_query = (mydate, flux, satellite)
-
-    #print(mydate
 
 except mysql.connector.Error as err:
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
@@ -69,5 +67,4 @@ except mysql.connector.Error as err:
     else:
             print(err)
 else:
-    print("no pude")
     cnx.close()
