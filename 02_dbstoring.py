@@ -36,7 +36,7 @@ try:
 
       data_query1 = (id_events, title, description)
       cursor.execute(query1,data_query1)
-
+      print("hey")
 """
       increment = 1
       data_geometry = data.get("geometry")
