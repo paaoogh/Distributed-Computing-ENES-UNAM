@@ -13,24 +13,23 @@ from mysql.connector import errorcode
 
 
 PATH1 = "/Users/paogh/Documents/Computo_distribuido/git/"
+
 with open(PATH1+'db.json') as json_file:
-        config=json.load(json_file)
-
-with open('db.json') as json_file:
-    config = json.load(json_file)
-
-    magnitudes_ = [] #x axis
-    y = []
+    config=json.load(json_file)
+    
+magnitudes_ = [] #x axis
+dates_ = [] #y axis
     
 try:
-    my_date= datetime.today().strftime('%Y-%m-%d')
     cnx = mysql.connector.connect(**config, auth_plugin="mysql_native_password")
     cursor = cnx.cursor()
-    query = ("SELECT magnitude FROM geometry WHERE type_geo="point" ORDER BY type_geo")
+    query = ("SELECT magnitude, date FROM geometry WHERE magnitude>= 50 ORDER BY date")
     cursor.execute(query)
 
-    for i in cursor:
-        magnitudes_.append(i)
+    for (magnitude, date) in cursor:
+        print(f"{date}\t{magnitude}")
+        magnitudes_.append(magnitude)
+        dates_.append(date)
         
 except mysql.connector.Error as err:
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
@@ -44,10 +43,10 @@ else:
 
 
 fig, ax = plt.subplots()
-ax.set(xlabel='magnitudes', ylabel='flux',
-       title='view3D')
+ax.set(xlabel='Dates', ylabel='Events magnitude',
+       title='view2D')
 #plt.axis([x_A, x_B,  y_A, y_B])
 ax.grid()
 
-ax.plot(x, y)
-#fig.savefig("/home/vdelaluz/public_html/static/last_flux.png")
+ax.plot(dates_, magnitudes_)
+fig.savefig("/Users/paogh/Documents/Computo_distribuido/git/last_flux.png")
