@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 #Important libraries at the top. For future usage libraries will be commented with a (*)
+
 import json
 import requests
 import sys
@@ -22,5 +23,5 @@ for event in events_list:
     my_path = "paolagh@132.247.186.67:public_html/static"
     with open(filename, 'w') as outfile:
         json.dump(event, outfile)
-    output = subprocess.run(["scp",filename,"paolagh@132.247.186.67:public_html/static"])
-    #output = subprocess.run(["mv",filename,"paolagh@132.247.186.67:json/backup"])
+    output = subprocess.run(["scp",filename,"paolagh@132.247.186.67:public_html/static/backup"])
+  
