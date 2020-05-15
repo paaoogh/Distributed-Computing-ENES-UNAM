@@ -10,9 +10,9 @@ import subprocess
 from datetime import datetime
 #_______________*_____________________
 
-PATH1 = "/Users/paogh/Documents/Computo_distribuido/git/"
+PATH1 = "/Users/paogh/Documents/Computo_distribuido/git/" #Paola's directory
 #PATH2 = "paolagh@132.247.186.67:public_html/static/"
-PATH2 = "/Users/paogh/Documents/Computo_distribuido/git/Distributed-Computing-ENES-UNAM/"
+PATH2 = "/Users/paogh/Documents/Computo_distribuido/git/Distributed-Computing-ENES-UNAM/" #Paola's directory
 
 with open(PATH1+'db.json') as json_file:
 	config=json.load(json_file)
