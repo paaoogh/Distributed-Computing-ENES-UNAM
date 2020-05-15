@@ -12,7 +12,7 @@ import mysql.connector
 from mysql.connector import errorcode
 
 
-PATH1 = "/Users/paogh/Documents/Computo_distribuido/git/"
+PATH1 = "/Users/paogh/Documents/Computo_distribuido/git/" #Paola's directory
 
 with open(PATH1+'db.json') as json_file:
     config=json.load(json_file)
@@ -49,4 +49,4 @@ ax.set(xlabel='Dates', ylabel='Events magnitude',
 ax.grid()
 
 ax.plot(dates_, magnitudes_)
-fig.savefig("/Users/paogh/Documents/Computo_distribuido/git/last_flux.png")
+fig.savefig("/Users/paogh/Documents/Computo_distribuido/git/last_flux.png") #Also Paola's directory
