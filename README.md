@@ -5,7 +5,6 @@ PRACTICE 2 - REVISION 1
 ## CONTACT INFORMATION OF CONTRIBUTORS TO THE PROJECT:
 Maria Lucrecia Beltz González - <lucreciabeltz@gmail.com>  
 Paola González Hernández - <paaoogh@gmail.com>  
-Samuel Gomez Lara - <samuelgolara@gmail.com>  
 
 ## INTRODUCTION: Overview
 The Earth is experimenting diverse natural episodes through time. Now at days, technology allows us to track them in (almost) live stream. The National Aeronatics and Scpace Administration (NASA) has devoted part of their investigation to work with natural events curation, they have developed a project named EONET (Earth Observatory Natural Event Tracker), and colaborating with the Earth Observatory and the ESDIS project (Earth Science Data and Information System), they have acheived the satellite imaginery into metadata.  
