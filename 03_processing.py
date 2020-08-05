@@ -12,7 +12,7 @@ import mysql.connector
 from mysql.connector import errorcode
 
 
-PATH1 = "/Users/paogh/Documents/Computo_distribuido/git/" #Paola's directory
+PATH1 = "/home/paola/Documents/" #Paola's directory
 
 with open(PATH1+'db.json') as json_file:
     config=json.load(json_file)
@@ -41,12 +41,14 @@ except mysql.connector.Error as err:
 else:
     cnx.close()
 
-
-fig, ax = plt.subplots()
+plt.style.use('seaborn-dark')
+fig, ax = plt.subplots(figsize=(8, 8))
 ax.set(xlabel='Dates', ylabel='Events magnitude',
        title='view2D')
 #plt.axis([x_A, x_B,  y_A, y_B])
 ax.grid()
 
-ax.plot(dates_, magnitudes_)
-fig.savefig("/Users/paogh/Documents/Computo_distribuido/git/last_flux.png") #Also Paola's directory
+ax.bar(dates_, magnitudes_, align='center')
+labels = ax.get_xticklabels()
+plt.setp(labels, rotation=35, horizontalalignment='right')
+fig.savefig("/home/paola/Documents/last_flux.png") #Also Paola's directory

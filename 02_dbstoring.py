@@ -10,9 +10,9 @@ import subprocess
 from datetime import datetime
 #_______________*_____________________
 
-PATH1 = "/Users/paogh/Documents/Computo_distribuido/git/" #Paola's directory
+PATH1 = "/home/paola/Documents/" #Paola's directory
 #PATH2 = "paolagh@132.247.186.67:public_html/static/"
-PATH2 = "/Users/paogh/Documents/Computo_distribuido/git/Distributed-Computing-ENES-UNAM/" #Paola's directory
+PATH2 = "/home/paola/Documents/Distributed-Computing-ENES-UNAM/" #Paola's directory
 
 with open(PATH1+'db.json') as json_file:
 	config=json.load(json_file)
@@ -46,6 +46,7 @@ try:
             units = geo.get("magnitudeUnit")
             type_geo = geo.get("type")
             id_geo = str(increment)+ "_" + filename[-15:-5]
+            #print(id_geo) #solamente para saber donde vamos
             date_tag = geo.get("date")
             date_tag = date_tag[0:10]+" "+date_tag[11:-1]
             
