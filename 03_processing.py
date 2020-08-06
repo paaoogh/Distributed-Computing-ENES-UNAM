@@ -41,6 +41,8 @@ except mysql.connector.Error as err:
 else:
     cnx.close()
 
+dating = str(datetime.today())[0:10] + '.png'
+
 plt.style.use('seaborn-dark')
 fig, ax = plt.subplots(figsize=(8, 8))
 ax.set(xlabel='Dates', ylabel='Events magnitude',
@@ -51,4 +53,6 @@ ax.grid()
 ax.bar(dates_, magnitudes_, align='center')
 labels = ax.get_xticklabels()
 plt.setp(labels, rotation=35, horizontalalignment='right')
-fig.savefig("/home/paola/Documents/last_flux.png") #Also Paola's directory
+fig.savefig("/home/paola/Documents/"+ dating) #Also Paola's directory
+
+subprocess.run(["scp",PATH1 + dating,"paolagh@132.247.186.67:public_html/static/"])
