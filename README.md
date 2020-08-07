@@ -9,24 +9,26 @@ Paola González Hernández - <paaoogh@gmail.com>
 This project, alongside its content and multimedia used in the Wordpress blog, is protected under the copyleft GNU General Public License of 2007. 
 
 ## INTRODUCTION: Overview
-The Earth is experimenting diverse natural episodes through time. Now at days, technology allows us to track them in (almost) live stream. The National Aeronatics and Scpace Administration (NASA) has devoted part of their investigation to work with natural events curation, they have developed a project named EONET (Earth Observatory Natural Event Tracker), and colaborating with the Earth Observatory and the ESDIS project (Earth Science Data and Information System), they have acheived the satellite imaginery into metadata.  
+The Earth is experimenting diverse natural episodes through time. Now at days, technology allows us to track them in (almost) live stream. The National Aeronatics and Space Administration (NASA) has devoted part of their investigation to work with natural events curation, they have developed a project named EONET (Earth Observatory Natural Event Tracker), and colaborating with the Earth Observatory and the ESDIS project (Earth Science Data and Information System), they have acheived the conversion of satellite imaginery into metadata.  
 
 Even though the definition of what a natural event is could be intuitive, the lack of consistency brings new contraints that includes (but is not limited to): contextual parameters, the meaning of different definitions proportioned by diverse sources to an end urser, and the interpretation that both peers may give them.  
 
-This project aims to make a distributed system that helps the understanding of the above mentioned by showing graphs and retreiving NASA open data within a period of time.
+This project aims to make a distributed system that helps the understanding of the above mentioned and reducing the contextual conflict by showing plottings and retreiving NASA open data within a period of time; the plottings are a description of the magnitude of a natual event. The need of generating a product that will allow the public in general to understand the files comes from the fact that not all the people around the globe know that a JSON file is and, what is more, how to interpret it. 
+
+As the amount of information retreived from the EONET API is bigger than what a simple and individual program could handle, a set of components (modules) are the ones in charge of every piece of a major process that describe this project. Different physical components are needed in case you want to download this project: the data source will provide the metadata, but the storaging system in a database with SQL language is mandatory; afterwards, data has to be processed and delivered at a final application (Wordpress blog in this case). Although just one system is mentioned for the processing, this project also uses another server in order tu generate the place where the images (final plottings) are taken from in Wordpress. Furthermore: this EONET distributed computing system has a client-server architechture. 
 
 ### Techniques and Methodology
-Following the eXtreme Programming schema, the NASA EONET will be the data provider that will allow the personal computer to send the data to a server. The final client will be able to get the data needed in the form of diverse graphs.  
+**General idea:**Following the eXtreme Programming schema, the NASA EONET will be the data provider that will allow the personal computer to send the data to a server. The final client will be able to get the data needed in the form of diverse graphs.  
 
 Tools needed:
-    * Python programming language
-    * Python libraries: json, requests, sys, subprocess
-    * Json
-    * SCP protocol 
-    * Visual Studio Code
-    * Other python libraries will be updated as the project moves forward. Currently looking forward for the plotting: matplotlib, mysql.connector
-    *MySQL
-    *Usage of an external server in order to process and plot the data
+    * *Primary programming language:* Python 3.x
+    * *Python primary libraries:* json, requests, sys, subprocess, mysql connector,  
+    * *Other Python libraries:*  matplotlib, glob, datetime, shutil, wget
+    * *Database Management System:* MySQL 
+    * *Other software tools:* JSON files, Visual Studio Code, networking protocols 
+    * *Other physical tools:* external server
+
+
 
 Run the 01_retreive.py program for the data fetching. More requirements information and storage provided in sections below.
 
