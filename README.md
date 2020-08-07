@@ -15,7 +15,7 @@ Even though the definition of what a natural event is could be intuitive, the la
 
 This project aims to make a distributed system that helps the understanding of the above mentioned by showing graphs and retreiving NASA open data within a period of time.
 
-### Technique and Methodology
+### Techniques and Methodology
 Following the eXtreme Programming schema, the NASA EONET will be the data provider that will allow the personal computer to send the data to a server. The final client will be able to get the data needed in the form of diverse graphs.  
 
 Tools needed:
@@ -31,10 +31,10 @@ Tools needed:
 Run the 01_retreive.py program for the data fetching. More requirements information and storage provided in sections below.
 
 
-## REQUIREMENTS:
+## SOFTWARE REQUIREMENTS:
 In the aim of control the data access, NASA need to generate the proper developer credentials. The can be requested [here](https://api.nasa.gov). The limited downloading of data per hour and IP address within different APIs is available with a demo key. For the moment, NASA EONET is not requiring APIs credential, but may be requested in further processes as requested from de NASA.
 
-## DATA RETREIVING:
+## IMPLEMENTATION: HANDLING DATA
 
 The version with which we will be working is version 3, but version 2.1 is still available.  
 
@@ -43,9 +43,27 @@ Downloadable APIs include: Events (which is the main data for this project - Geo
 ### Data description:
 Once data is downloaded, from the link: <https://eonet.sci.gsfc.nasa.gov/api/v3/events> through the *requests* (implemented with the library mentioned above), a dictionary with four keys will be stored at data, as shown in the figure bellow:
 
+### Data retrieving and storaging:
+
+### Processing data:
+
+### Further processes
+
+### Working on a web page
+
+
+## TESTING AND ANALYZING
 
 ## CONCLUSIONS:
    1. It is very important to get to know and understand the data that you are working with in order to proceed to diverse steps. This includes (and is not limited to) understanding the format, data types and restrictions (such as legal protection of data). In this case, the first challenge faced was working and processing with no-extension files, followed by the arrangements of the data provided by EONET.
+
+### EONET as a whole
+
+### EONET in progress
+
+### Bumps and challenges
+
+### A new vision of the world
    
 Several stages will allow us to generate comments within this section and will be submited when apropiate.
 
