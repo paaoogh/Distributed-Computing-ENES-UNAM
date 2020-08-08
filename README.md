@@ -36,6 +36,8 @@ The curated data acquired from the EONET page has been already processed by the 
 
 The diagram bellow illustrates the process in a more detailed manner.
 
+*INSERTAR DIAGRAMA DE CONEXIÓN LÓGICA 
+
 **How did the eXtreme Programming has to work here?**
 
 The idea is manage this project with agile methods that will allow any changes to be implemented with enought time. The integrants of the former team had to understand every component and the way in which they are related as a whole. It is important, though, if collaboration or cloning of this project is desired, to also take time to understand the processes at the programs and the architecture of the database used, so as the original organization of the files that will be mentioned bellow. 
@@ -111,13 +113,31 @@ If you only run this program, make sure you already are within its directory and
 
 Another and simpler way to see it is following the path that the information follows: from the satellite and after NASA EONET has curated the metadata, 01_retrieve.py will request through internet the data and split it into .json files. 02_dbstoring.py will move the files into the server and a database:
 
-![Data Flux][flux]
-[flux]: https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/Data%flux.png "Data flux"
+*INSERTAR DIAGRAMA DATA FLUX
+
+
 ### Processing data:
+
+From the many possibilities of showing plottings, this project decided to use bar graphs as they are more intuitive to end users and easier to understand. *03_processing.py* makes another query (with the same idea of only opening one connector as mentioned above) of selecting the magnitudes and plotting them in a single bar. 
+
+At the beginning, it did not matter if the images produced were overwritten by the program initially named "last flux. png", nonetheless an end user could want to see past events measurements, so now they are named with the dating that they were generated. This will also help the wordpress blog to redirect the webpage to the proper image. 
+
+Also, the final product of this execution, will be copied into the server main static page. 
 
 ### Further processes
 
+**04_moving.py:** this is an extra process for interal control at the personal computer where this project is executed. Once the event files are created in the main directory of this project, they will be moved to another place with the execution date in the personal computer so no redundances are made. 
+
+**Further more:**
+As a distributed computing project, up to this point, we only got separated threads of processes, now it is important to put them all together into a single masterpiece: *ordering.sh* will be the point guard and point forward of the game. 
+
+Inpired by the Berkeley algorithm with inalambric networking and the Lamport logic clocks, this project works with the idea of following a sequence, more than sincronizing timings and clocks: it will be enough with making the processes to be well-ordered and coordinated without having the computer and server to be exactly sincornized at the "real time"... because, at the end of it: what is even real time? We cannot actually sincronize clocks perfectly (logically and/or phyisically). 
+
+As that being said: the important thing will be exectute *ordering.sh* at a certain time of the personal computer or the server with crontab -e. This script contrains the moving of files and changing of directories needed.
+
 ### Working on a web page
+
+As said at the beginning, the plottings will be shown at a [Wordpress Blog](eonetplotting.wordpress.com) where a more coloquial description of the project is provided. This page will redirect to the server static page. In a further increment, using the library of python for wordpress can be implemented for authomatic redirection to a specific image. 
 
 
 ## TESTING AND ANALYZING
