@@ -21,14 +21,17 @@ As the amount of information retreived from the EONET API is bigger than what a 
 **General idea:**Following the eXtreme Programming schema, the NASA EONET will be the data provider that will allow the personal computer to send the data to a server. The final client will be able to get the data needed in the form of diverse graphs.  
 
 Tools needed:
-    * *Primary programming language:* Python 3.x
-    * *Python primary libraries:* json, requests, sys, subprocess, mysql connector,  
-    * *Other Python libraries:*  matplotlib, glob, datetime, shutil, wget
-    * *Database Management System:* MySQL 
-    * *Other software tools:* JSON files, Visual Studio Code, networking protocols 
-    * *Other physical tools:* external server
+* *Primary programming language:* Python 3.x
+* *Python primary libraries:* json, requests, sys, subprocess, mysql connector,  
+* *Other Python libraries:*  matplotlib, glob, datetime, shutil, wget
+* *Database Management System:* MySQL 
+* *Other software tools:* JSON files, Visual Studio Code, networking protocols 
+* *Other physical tools:* external server
 
+**General description of the architecture**
+![/home/paola/Documents/Distributed-Computing-ENES-UNAM/Diagrams/logic_connection.png]
 
+**How did the eXtreme Programming has to work here?**
 
 Run the 01_retreive.py program for the data fetching. More requirements information and storage provided in sections below.
 
