@@ -111,7 +111,8 @@ If you only run this program, make sure you already are within its directory and
 
 Another and simpler way to see it is following the path that the information follows: from the satellite and after NASA EONET has curated the metadata, 01_retrieve.py will request through internet the data and split it into .json files. 02_dbstoring.py will move the files into the server and a database:
 
-![Data Flux](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/Data%flux.png)
+![Data Flux][flux]
+[flux]: https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/Data%flux.png "Data flux"
 ### Processing data:
 
 ### Further processes
