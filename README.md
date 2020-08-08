@@ -36,7 +36,7 @@ The curated data acquired from the EONET page has been already processed by the 
 
 The diagram bellow illustrates the process in a more detailed manner.
 
-*INSERTAR DIAGRAMA DE CONEXIÓN LÓGICA 
+![logic conection](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/logic%20conection.png)
 
 **How did the eXtreme Programming has to work here?**
 
@@ -113,7 +113,7 @@ If you only run this program, make sure you already are within its directory and
 
 Another and simpler way to see it is following the path that the information follows: from the satellite and after NASA EONET has curated the metadata, 01_retrieve.py will request through internet the data and split it into .json files. 02_dbstoring.py will move the files into the server and a database:
 
-*INSERTAR DIAGRAMA DATA FLUX
+![Data flux](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/Data%20flux.png)
 
 
 ### Processing data:
@@ -135,6 +135,8 @@ Inpired by the Berkeley algorithm with inalambric networking and the Lamport log
 
 As that being said: the important thing will be exectute *ordering.sh* at a certain time of the personal computer or the server with crontab -e. This script contrains the moving of files and changing of directories needed.
 
+![data processing](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/data%20processing.png)
+
 ### Working on a web page
 
 As said at the beginning, the plottings will be shown at a [Wordpress Blog](eonetplotting.wordpress.com) where a more coloquial description of the project is provided. This page will redirect to the server static page. In a further increment, using the library of python for wordpress can be implemented for authomatic redirection to a specific image. 
@@ -149,11 +151,11 @@ The fact that the routes that packets take may not be the same and that, before 
 
 EONET Plottig project has the following timings in average:
 
-*INSERTAR DIAGRAMA DE LATENCIAS
+![latency](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/latency.png)
 
 As said before, there is directory with complementary images of examples of the plottings made, but, in general, they look like this:
 
-*INSERTAR UNA GRÁFICA
+![2020-08-08](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Complementary%20material/PLOTTINGS/2020-08-08.png)
 
 ## CONCLUSIONS:
 
