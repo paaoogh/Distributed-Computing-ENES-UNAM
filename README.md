@@ -75,6 +75,18 @@ JSON files are easier to manage when storagin into a database because they have 
 
 **Data downloaded from EONET**
 
+In first instance, a single file is downloaded from the API, you can see in the section *"Data retrieving and storaging* how the process works with the program *01_retrieving.py*; the main point to mention here is that not all the features that EONET provides are used. The following chart can illustrate the data that I am working with:
+
+|  FIELD |DESCRIPTION|MANDATORY|EXAMPLE|DATABASE TABLE|DATABASE ALIAS|
+|--------|-----------|---------|-------|--------------|--------------|
+|ID_EVENT |
+|NAME_EVENT |
+|DESCRIPTION |
+|ID_GEOMETRY |
+|MAGNITUDE |
+|UNITS |
+|GEOMETRY |
+|DATES   |
 
 
 ### Data retrieving and storaging:
