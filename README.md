@@ -139,8 +139,21 @@ As that being said: the important thing will be exectute *ordering.sh* at a cert
 
 As said at the beginning, the plottings will be shown at a [Wordpress Blog](eonetplotting.wordpress.com) where a more coloquial description of the project is provided. This page will redirect to the server static page. In a further increment, using the library of python for wordpress can be implemented for authomatic redirection to a specific image. 
 
+The last point mentioned above brings us to the fact that sharing data can go from something simple as an html page to a more complex project such as web services modules that allow to standarize creation processes of web services, sharng the project and making it easy to install, for example, a plug-in. 
 
 ## TESTING AND ANALYZING
+
+Making a distributed computing project is not as easy as it seems: working in a local network as much as possible is makes everything faster and easier but there are limits imposed by the needs of the project itself. In this specific case of EONET plottings, as seen in the diagrams before, we have to go through the internet a couple times, that means that we have to take into consideration security, geographical scopes and **time of information interchange**.
+
+The fact that the routes that packets take may not be the same and that, before getting to any server services, information has to go through regional routers and meganodes routers are one of the main reasons why testing a couple times how long does every process take is very important. With that in mind, further increments and cycles for the project to grow can be applied: you will know how often cant you update the information in order to apply correctly the crontab.
+
+EONET Plottig project has the following timings in average:
+
+*INSERTAR DIAGRAMA DE LATENCIAS
+
+As said before, there is directory with complementary images of examples of the plottings made, but, in general, they look like this:
+
+*INSERTAR UNA GRÁFICA
 
 ## CONCLUSIONS:
    1. It is very important to get to know and understand the data that you are working with in order to proceed to diverse steps. This includes (and is not limited to) understanding the format, data types and restrictions (such as legal protection of data). In this case, the first challenge faced was working and processing with no-extension files, followed by the arrangements of the data provided by EONET.
