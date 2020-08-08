@@ -13,7 +13,7 @@ The Earth is experimenting diverse natural episodes through time. Now at days, t
 
 Even though the definition of what a natural event is could be intuitive, the lack of consistency brings new contraints that includes (but is not limited to): contextual parameters, the meaning of different definitions proportioned by diverse sources to an end urser, and the interpretation that both peers may give them.  
 
-This project aims to make a distributed system that helps the understanding of the above mentioned and reducing the contextual conflict by showing plottings and retreiving NASA open data within a period of time; the plottings are a description of the magnitude of a natual event. The need of generating a product that will allow the public in general to understand the files comes from the fact that not all the people around the globe know that a JSON file is and, what is more, how to interpret it. 
+This project aims to make a distributed system that helps the understanding of the above mentioned and reducing the contextual conflict by showing plottings and retreiving NASA open data within a period of time; the plottings are a description of the magnitude of a natual event. The need of generating a product that will allow the public in general to understand the files comes from the fact that not all the people around the globe know that a JSON (JavaScript Object Notation) file is and, what is more, how to interpret it. 
 
 As the amount of information retreived from the EONET API is bigger than what a simple and individual program could handle, a set of components (modules) are the ones in charge of every piece of a major process that describe this project. Different physical components are needed in case you want to download this project: the data source will provide the metadata, but the storaging system in a database with SQL language is mandatory; afterwards, data has to be processed and delivered at a final application (Wordpress blog in this case). Although just one system is mentioned for the processing, this project also uses another server in order tu generate the place where the images (final plottings) are taken from in Wordpress. Furthermore: this EONET distributed computing system has a client-server architechture. 
 
@@ -63,14 +63,19 @@ In case you want to see the site used for this project, redirect yourself to the
 
 ## IMPLEMENTATION: HANDLING DATA
 
-*Important: the current EONET metadata version moved from 2.1 to 3, although the first one is still available, I am working with version 3.*
+*Important: the current EONET metadata version moved from 2.1 to 3, although the first one is still available, I am working with version 3.* 
 
-The version with which we will be working is version 3, but version 2.1 is still available.  
-
-Downloadable APIs include: Events (which is the main data for this project - GeoJson), Categories and Layers. A further description of the data types and the meaning of what is downloaded is depicted in this [source](https://eonet.sci.gsfc.nasa.gov/docs/v3). If downloaded directly into personal computer, files without any extension will be stored; in case you want to save it as .JSON, it will have to be added manually. Run the script 01_etreive.py to get the files. Files are not downloaded but processed into Python dictionaries using JSON:
+Downloadable APIs include: Events (which is the main data for this project - GeoJson), Categories and Layers. A further description of the data types and the meaning of what is downloaded is depicted in this [source](https://eonet.sci.gsfc.nasa.gov/docs/v3). If downloaded directly into personal computer, a single file without any extension will be stored; in case you want to save it as .JSON, it will have to be added manually. 
 
 ### Data description:
-Once data is downloaded, from the link: <https://eonet.sci.gsfc.nasa.gov/api/v3/events> through the *requests* (implemented with the library mentioned above), a dictionary with four keys will be stored at data, as shown in the figure bellow:
+
+**Introduction to the contextual formating:** NASA EONET project works with a contextual format called "GeoJSON" that workis tith the World Geodetic System of 1984. This is an information interchange format for geospacial data for different types fo JSON files that include diverse manners to represent geographical features such as properties and geometry (type of point and coordinates). GeoJSON Status definition can be found in the [RFC 2026](https://www.rfc-editor.org/info/rfc2026) and the definition of Stream at [RFC 4844](https://rfc-editor.org/info/rfc4844).
+
+JSON files are easier to manage when storagin into a database because they have a "hash-table-structure-Python-dictionary" alike format. This allows to simply convert the keys into attributes and the values as entries; in other other words: JSON files are easier to parse. 
+
+**Data downloaded from EONET**
+
+
 
 ### Data retrieving and storaging:
 
