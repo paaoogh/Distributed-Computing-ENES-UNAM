@@ -29,7 +29,8 @@ Tools needed:
 * *Other physical tools:* external server
 
 **General description of the architecture**
-![/home/paola/Documents/Distributed-Computing-ENES-UNAM/Diagrams/logic_connection.png]
+
+![Logic Network Configuration](/home/paola/Documents/Distributed-Computing-ENES-UNAM/Diagrams/logic_connection.png)
 
 **How did the eXtreme Programming has to work here?**
 
