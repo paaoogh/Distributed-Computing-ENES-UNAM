@@ -177,6 +177,10 @@ As said before, there is directory with complementary images of examples of the 
 - Sometimes you do not need a book to help you learn, but knowing where to seach and how to do so... This project has been all about learning to learn and loosing the fear to experiment and try new things with my computer. With this I am not encouraging you to mess up you personal computer or, what's even more, your working station; I do am saying that this project made me grow as a data science student by loosing the fear to learn and try new things. 
 
 ## BIBLIOGRAPHY AND REFERENCES:
-    1. *{NASA APIs}* (NASA Open Innovation Team,2020). Retreived from: <https://api.nasa.gov>. 
-    2. *What is EONET?* (EONET et al, 2020). Retreived from: <https://eonet.sci.gsfc.nasa.gov/what-is-eonet>
-    3. *Version 3 Documentation* (EONET et al, 2020). Retreived from: <https://eonet.sci.gsfc.nasa.gov/docs/v3>
+    1. *{NASA APIs}* (NASA Open Innovation Team,2020). Retrieved from: <https://api.nasa.gov>. 
+    2. *What is EONET?* (EONET et al, 2020). Retrieved from: <https://eonet.sci.gsfc.nasa.gov/what-is-eonet>
+    3. *Version 3 Documentation* (EONET et al, 2020). Retrieved from: <https://eonet.sci.gsfc.nasa.gov/docs/v3>
+    4. *The GeoJSON Format* (Butler, H. et all). RFC 7946, DOI 10.17587/RFC7946, August 20016. Retrieved from: <https://www.rfc-editor.org/info/rfc7946>
+    5. *WordPress.com: Create a Free Website of Blocg*. (WordPress, 2020). Retrieved from <https://wordpress.com>
+    6. *Wordpress API - Python Client*. (Sanchez, C., 2020) Retrieved from: <https://www.github.com/derwentx/wp-api-python>
+    
