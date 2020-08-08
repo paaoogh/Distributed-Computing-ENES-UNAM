@@ -8,6 +8,7 @@ import json
 import glob
 import subprocess
 from datetime import datetime
+import os
 #_______________*_____________________
 
 PATH1 = "/home/paola/Documents/" #Paola's directory
@@ -22,7 +23,8 @@ try:
     cursor = cnx.cursor()
     query1 = ("INSERT INTO events(id, title, description) VALUES(%s, %s, %s)")
     query2 = ("INSERT INTO geometry(id_geom, id_events, magnitude, units, type_geo, date) VALUES(%s, %s, %s, %s, %s, %s)")
-    query3 = ("INSERT INTO geometry(id_geom, id_events, type_geo, date) VALUES(%s, %s, %s, %s)")
+    #query3 = ("INSERT INTO geometry(id_geom, id_events, type_geo, date) VALUES(%s, %s, %s, %s)")
+    query_check = ("SELECT * FROM events WHERE id=%s")
 
     for filename in glob.glob(PATH2+"*.json"):
         print(filename)    
@@ -33,7 +35,10 @@ try:
         title = data.get("title")
         description = data.get("description")
         data_query1 = (id_events, title, description)
-        
+
+        if os.strerror(1062): #in case the event is already in the database
+            continue
+
         cursor.execute(query1,data_query1)
         cnx.commit()
         increment = 1
