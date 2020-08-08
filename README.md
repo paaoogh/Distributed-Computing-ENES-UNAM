@@ -79,7 +79,7 @@ In first instance, a single file is downloaded from the API, you can see in the 
 
 |  FIELD |DESCRIPTION|MANDATORY|EXAMPLE|DATABASE TABLE|DATABASE ALIAS|
 |--------|-----------|---------|-------|--------------|--------------|
-|ID_EVENT |
+|ID_EVENT | Unique ID for these events | YES | EONET_354 | events | ID |
 |NAME_EVENT |
 |DESCRIPTION |
 |ID_GEOMETRY |
