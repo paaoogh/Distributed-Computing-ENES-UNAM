@@ -88,8 +88,12 @@ In first instance, a single file is downloaded from the API, you can see in the 
 |**GEOMETRY** | Type of mark per event | YES | point | geometry | TYPE |
 |**DATES**| Date of occurrence per event | YES | 2020-08-01T18:000:00Z | geometry | DATE |
 
+Also, it you wish, there is a directory called ["
+Complementary material](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/tree/master/
+complementary%20material) where you can find examples of the files created, MySQL more explicit tables and diagrams, and the final plottings (that are the aim of this project).
 
 ### Data retrieving and storaging:
+
 
 ### Processing data:
 
