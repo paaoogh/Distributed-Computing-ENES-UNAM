@@ -99,15 +99,15 @@ complementary%20material) where you can find examples of the files created, MySQ
 If you only run this program, make sure you already are within its directory and you will have a copy of every natural event description in a file. Each file will contain many measurements of the event alonside with a  lot of data that, as mentioned above, will not all be used for the moment. It is very important to save correctly the documents as it could make a failure to control de information otherwise.
 
 **02_dbstoring.py:** in this case, the algorithm to follow will be:
-* 1. Open a connection to the database.
-* 2. Open a cursor.
-* 3. Make an abstract query (more or less generic). This this part would be a good idea to try the query by itself on the database before executing the program.
-* 4. for each file:
-*  1. Open file and parse.
-*  2. Extract and cast information.
-*  3. List data.
-*  4. Execute query over cursor.
-*  5. Move file from static to backup with subprocess library.
+- 1. Open a connection to the database.
+- 2. Open a cursor.
+- 3. Make an abstract query (more or less generic). This this part would be a good idea to try the query by itself on the database before executing the program.
+- 4. for each file:
+-    1. Open file and parse.
+-    2. Extract and cast information.
+-    3. List data.
+-    4. Execute query over cursor.
+-    5. Move file from static to backup with subprocess library.
 
 ### Processing data:
 
