@@ -31,6 +31,7 @@ Tools needed:
 **General description of the architecture**
 
 ![Logic Network Configuration](/home/paola/Documents/Distributed-Computing-ENES-UNAM/Diagrams/logic_connection.png)
+Format: ![Alt Text](url)
 
 **How did the eXtreme Programming has to work here?**
 
