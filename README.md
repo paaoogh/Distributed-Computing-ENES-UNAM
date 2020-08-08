@@ -65,7 +65,7 @@ In case you want to see the site used for this project, redirect yourself to the
 
 ## IMPLEMENTATION: HANDLING DATA
 
-*Important: the current EONET metadata version moved from 2.1 to 3, although the first one is still available, I am working with version 3.* 
+*Important: the current EONET metadata version moved from 2.1 to 3, although the first one is still available until the end of 2020, I am working with version 3.* 
 
 Downloadable APIs include: Events (which is the main data for this project - GeoJson), Categories and Layers. A further description of the data types and the meaning of what is downloaded is depicted in this [source](https://eonet.sci.gsfc.nasa.gov/docs/v3). If downloaded directly into personal computer, a single file without any extension will be stored; in case you want to save it as .JSON, it will have to be added manually. 
 
@@ -156,17 +156,25 @@ As said before, there is directory with complementary images of examples of the 
 *INSERTAR UNA GRÁFICA
 
 ## CONCLUSIONS:
-   1. It is very important to get to know and understand the data that you are working with in order to proceed to diverse steps. This includes (and is not limited to) understanding the format, data types and restrictions (such as legal protection of data). In this case, the first challenge faced was working and processing with no-extension files, followed by the arrangements of the data provided by EONET.
 
 ### EONET as a whole
+- The data provided by EONET also gives a wide area of growth and many scalability options. The curation of events is a very important part of this project and EONET by itself: the definition of what constitutes an event is still fluid in terms that there is no exact and real definition. A very important question may define the focusing of cloning and contributing to this project: What are the contextual parameters of an event? 
+- Working with (almost) real time data is more complex than it sounds. Only focusing of using one single tool and master it woudln't begin to describe this project, that is another reason why ONET Plotting can grow even more. A plug-in can be developed in a not so far future.
 
 ### EONET in progress
+- Only a couple of cycles (increments) were made up to now. Further processes include crontab and working with a framework such as Mezzanine (taking into consideration the requirements for each operative sistem and versions for each component of the framework and Django). 
+- As data is very extense and the data type is not restricted to only a specific type of numbers, other queries can be made and other tables in the database may be added. This will bring the oportunity to not only work with bar plottings, also other areas of data science could be involved, such as time series at certain geographic areas, Machine Learning for clustering analysis, among others.
 
 ### Bumps and challenges
+- NASA, as said before, is still working with contextualization of events, which sometimes bring the API's downloads to differ. At some point there was a slight change of the definition of the events that was not so easy to debbug in the project. From this, it is important to always get updates of the API's changes if they occur.
+- Initially, working with Mezzanine and Django was the goal, but the operative system that I am currently working with did not meet its software requirements. This was found after a long time of researching online, which made the project to migrate into a blog. 
+- Being single student working on this project was not easy at all, but also not impossible. Team working can make everything better and easier followin the eXtreme Programming methodology. 
+- By the time you read this, maybe we won't be on a world pandemic... but doing home office is not easy, what is more: learning from home a whole new subject is even more difficult.
 
 ### A new vision of the world
-   
-Several stages will allow us to generate comments within this section and will be submited when apropiate.
+- With this project, not only distributed computing knoledge was important, but also management of operative systems, a little bit of hardware research and more was gained. 
+- Disecting an enourmous critical project into small pieces of components that work along is sometimes easier to implement and understand, mostly if someone else is going to read the project or wants to work with you.
+- Sometimes you do not need a book to help you learn, but knowing where to seach and how to do so... This project has been all about learning to learn and loosing the fear to experiment and try new things with my computer. With this I am not encouraging you to mess up you personal computer or, what's even more, your working station; I do am saying that this project made me grow as a data science student by loosing the fear to learn and try new things. 
 
 ## BIBLIOGRAPHY AND REFERENCES:
     1. *{NASA APIs}* (NASA Open Innovation Team,2020). Retreived from: <https://api.nasa.gov>. 
