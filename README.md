@@ -77,16 +77,16 @@ JSON files are easier to manage when storagin into a database because they have 
 
 In first instance, a single file is downloaded from the API, you can see in the section *"Data retrieving and storaging* how the process works with the program *01_retrieving.py*; the main point to mention here is that not all the features that EONET provides are used. The following chart can illustrate the data that I am working with:
 
-|  FIELD |DESCRIPTION|MANDATORY|EXAMPLE|DATABASE TABLE|DATABASE ALIAS|
+| **FIELD** |**DESCRIPTION**|**MANDATORY**|**EXAMPLE**|**DATABASE TABLE**|**DATABASE ALIAS**|
 |--------|-----------|---------|-------|--------------|--------------|
-|ID_EVENT | Unique ID for these events | YES | EONET_354 | events | ID |
-|NAME_EVENT |
-|DESCRIPTION |
-|ID_GEOMETRY |
-|MAGNITUDE |
-|UNITS |
-|GEOMETRY |
-|DATES   |
+|**ID_EVENT** | Unique ID for these events | YES | EONET_354 | events | ID |
+|**NAME_EVENT** | Title of the event |YES | Dukono Volcano, Indonesia | events | TITLE|
+|**DESCRIPTION** | Optional longer description of the event made of a couple of sentences | NO | During 16 and 19-22 March, ash plumes from Dukono rose to altitudes of 1.5-2.4 km (5,000-8,000 ft). | events | DESCRIPTION |
+|**ID_GEOMETRY** | Unique ID of measurements made per event | YES | 1_EONET_354 | geometry | ID_GEOM |
+|**MAGNITUDE** | Information about magnitude of each event displayed if available | NO |35.0 | geometry | MAGNITUDE |
+|**UNITS** | Units of measurements for magnitudes if available | NO | kts | geometry | UNIT |
+|**GEOMETRY** | Type of mark per event | YES | point | geometry | TYPE |
+|**DATES**| Date of occurrence per event | YES | 2020-08-01T18:000:00Z | geometry | DATE |
 
 
 ### Data retrieving and storaging:
