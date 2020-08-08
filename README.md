@@ -28,18 +28,36 @@ Tools needed:
 * *Other software tools:* JSON files, Visual Studio Code, networking protocols 
 * *Other physical tools:* external server
 
+*Important: this project has been developed with Linux Operative System. Some processes may work differently with Windows or MacOS Catalina version.*
+
 **General description of the architecture**
 
-![Logic Network Configuration](/Diagrams/logic_connection.png)
-# Format: ![Alt Text](url)
+The curated data acquired from the EONET page has been already processed by the NASA Earth Observatory and the ESDIS, the geographical imaginery come from their satellite. Metadata will take time to get to the personal computer as the information travels through the internet: before entering to the local network, the packets have to go through a router and again through the firewall that connects to the server. 
+
+The diagram bellow illustrates the process in a more detailed manner.
 
 **How did the eXtreme Programming has to work here?**
 
-Run the 01_retreive.py program for the data fetching. More requirements information and storage provided in sections below.
+The idea is manage this project with agile methods that will allow any changes to be implemented with enought time. The integrants of the former team had to understand every component and the way in which they are related as a whole. It is important, though, if collaboration or cloning of this project is desired, to also take time to understand the processes at the programs and the architecture of the database used, so as the original organization of the files that will be mentioned bellow. 
 
-
-## SOFTWARE REQUIREMENTS:
+## SOFTWARE REQUIREMENTS AND INSTALLATION:
 In the aim of control the data access, NASA need to generate the proper developer credentials. The can be requested [here](https://api.nasa.gov). The limited downloading of data per hour and IP address within different APIs is available with a demo key. For the moment, NASA EONET is not requiring APIs credential, but may be requested in further processes as requested from de NASA.
+
+Having the software tools mentioned above will make easier the process. It is also necessary, in case cloning the project is the desire, to install git and configure it with your account through:
+
+```
+$ sudo apt-get update
+$ sudo apt-install git
+
+#Verify the installation was successfull:
+$ git --version
+>> git version 2.9.2
+
+#Configure username and email:
+$ git config --global user.name "My User"
+$ git config --global user.email "myuser@example.com"
+
+```
 
 ## IMPLEMENTATION: HANDLING DATA
 
