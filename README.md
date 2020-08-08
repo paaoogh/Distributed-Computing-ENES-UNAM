@@ -56,8 +56,10 @@ $ git --version
 #Configure username and email:
 $ git config --global user.name "My User"
 $ git config --global user.email "myuser@example.com"
-
 ```
+And through a `git clone https://github.com/paaoogh/Distributed_Computing_ENES-UNAM.git` on the terminal/command line you will get a local copy of this repository.
+
+In case you want to see the site used for this project, redirecto yourself to the Wordpress Blog [EONET Plotting]<eonetplotting.wordpress.com>
 
 ## IMPLEMENTATION: HANDLING DATA
 
