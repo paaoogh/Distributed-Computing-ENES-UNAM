@@ -61,7 +61,7 @@ $ git config --global user.email "myuser@example.com"
 ```
 And through a `git clone https://github.com/paaoogh/Distributed_Computing_ENES-UNAM.git` on the terminal/command line you will get a local copy of this repository.
 
-In case you want to see the site used for this project, redirect yourself to the Wordpress Blog [EONET Plotting](eonetplotting.wordpress.com)
+In case you want to see the site used for this project, redirect yourself to the Wordpress Blog [EONET Plotting](https://eonetplotting.wordpress.com/)
 
 ## IMPLEMENTATION: HANDLING DATA
 
@@ -139,7 +139,7 @@ As that being said: the important thing will be exectute *ordering.sh* at a cert
 
 ### Working on a web page
 
-As said at the beginning, the plottings will be shown at a [Wordpress Blog](eonetplotting.wordpress.com) where a more coloquial description of the project is provided. This page will redirect to the server static page. In a further increment, using the library of python for wordpress can be implemented for authomatic redirection to a specific image. 
+As said at the beginning, the plottings will be shown at a [Wordpress Blog](https://eonetplotting.wordpress.com/) where a more coloquial description of the project is provided. This page will redirect to the server static page. In a further increment, using the library of python for wordpress can be implemented for authomatic redirection to a specific image. 
 
 The last point mentioned above brings us to the fact that sharing data can go from something simple as an html page to a more complex project such as web services modules that allow to standarize creation processes of web services, sharng the project and making it easy to install, for example, a plug-in. 
 
