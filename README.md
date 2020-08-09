@@ -137,6 +137,25 @@ As that being said: the important thing will be exectute *ordering.sh* at a cert
 
 ![data processing](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/data%20processing.png)
 
+### Crontab
+The tool that helps to make possible automate and schedule tasks in Linux is known as *Crontab*. Before doing it be aware of the following:
+
+- If the time of processing that will take the execution of the files is longer than the downloading, sooner or later the process will not be sincronized and the automation has to be re-started. 
+- Make sure that you have crontab in your computer and that is running with:
+```
+$dpkg -l cron
+
+$systemcl status cron
+```
+In case it is not installed, it can be called with apt-get install. And when it is not running: `systemtcl start cron`
+
+Aftwerwars, open crontab with an editor such as emacs or vi: `sudo emacs /etc/crontab` and add: time, user and command. Note that some versions do not request user. You will se an example once you open the crontab file where it describes that timing is in format like: minute hour day-of-month month day-of-year.
+
+Once the command `./ordering.sh `is applied, the only thing that lasts is to restart the cron service:
+```
+systemcl restart cron
+```
+
 ### Working on a web page
 
 As said at the beginning, the plottings will be shown at a [Wordpress Blog](https://eonetplotting.wordpress.com/) where a more coloquial description of the project is provided. This page will redirect to the server static page. In a further increment, using the library of python for wordpress can be implemented for authomatic redirection to a specific image. 
@@ -185,4 +204,4 @@ As said before, there is directory with complementary images of examples of the 
     4. *The GeoJSON Format* (Butler, H. et all). RFC 7946, DOI 10.17587/RFC7946, August 20016. Retrieved from: <https://www.rfc-editor.org/info/rfc7946>
     5. *WordPress.com: Create a Free Website of Blocg*. (WordPress, 2020). Retrieved from <https://wordpress.com>
     6. *Wordpress API - Python Client*. (Sanchez, C., 2020) Retrieved from: <https://www.github.com/derwentx/wp-api-python>
-    
+
