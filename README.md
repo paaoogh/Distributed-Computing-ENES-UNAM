@@ -36,7 +36,7 @@ The curated data acquired from the EONET page has been already processed by the 
 
 The diagram bellow illustrates the process in a more detailed manner.
 
-*INSERTAR DIAGRAMA DE CONEXIÓN LÓGICA 
+![logic conection](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/logic%20conection.png)
 
 **How did the eXtreme Programming has to work here?**
 
@@ -61,7 +61,7 @@ $ git config --global user.email "myuser@example.com"
 ```
 And through a `git clone https://github.com/paaoogh/Distributed_Computing_ENES-UNAM.git` on the terminal/command line you will get a local copy of this repository.
 
-In case you want to see the site used for this project, redirect yourself to the Wordpress Blog [EONET Plotting](eonetplotting.wordpress.com)
+In case you want to see the site used for this project, redirect yourself to the Wordpress Blog [EONET Plotting](https://eonetplotting.wordpress.com/)
 
 ## IMPLEMENTATION: HANDLING DATA
 
@@ -113,7 +113,7 @@ If you only run this program, make sure you already are within its directory and
 
 Another and simpler way to see it is following the path that the information follows: from the satellite and after NASA EONET has curated the metadata, 01_retrieve.py will request through internet the data and split it into .json files. 02_dbstoring.py will move the files into the server and a database:
 
-*INSERTAR DIAGRAMA DATA FLUX
+![Data flux](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/Data%20flux.png)
 
 
 ### Processing data:
@@ -135,9 +135,11 @@ Inpired by the Berkeley algorithm with inalambric networking and the Lamport log
 
 As that being said: the important thing will be exectute *ordering.sh* at a certain time of the personal computer or the server with crontab -e. This script contrains the moving of files and changing of directories needed.
 
+![data processing](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/data%20processing.png)
+
 ### Working on a web page
 
-As said at the beginning, the plottings will be shown at a [Wordpress Blog](eonetplotting.wordpress.com) where a more coloquial description of the project is provided. This page will redirect to the server static page. In a further increment, using the library of python for wordpress can be implemented for authomatic redirection to a specific image. 
+As said at the beginning, the plottings will be shown at a [Wordpress Blog](https://eonetplotting.wordpress.com/) where a more coloquial description of the project is provided. This page will redirect to the server static page. In a further increment, using the library of python for wordpress can be implemented for authomatic redirection to a specific image. 
 
 The last point mentioned above brings us to the fact that sharing data can go from something simple as an html page to a more complex project such as web services modules that allow to standarize creation processes of web services, sharng the project and making it easy to install, for example, a plug-in. 
 
@@ -149,11 +151,11 @@ The fact that the routes that packets take may not be the same and that, before 
 
 EONET Plottig project has the following timings in average:
 
-*INSERTAR DIAGRAMA DE LATENCIAS
+![latency](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Diagrams/latency.png)
 
 As said before, there is directory with complementary images of examples of the plottings made, but, in general, they look like this:
 
-*INSERTAR UNA GRÁFICA
+![2020-08-08](https://github.com/paaoogh/Distributed-Computing-ENES-UNAM/blob/master/Complementary%20material/PLOTTINGS/2020-08-08.png)
 
 ## CONCLUSIONS:
 
