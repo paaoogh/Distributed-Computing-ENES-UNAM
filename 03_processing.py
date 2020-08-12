@@ -13,7 +13,7 @@ import mysql.connector
 from mysql.connector import errorcode
 
 
-PATH1 = "/home/paola/Documents/" #Paola's directory
+PATH1 = "/home/vdelaluz/git/Distributed-Computing-ENES-UNAM/" #Paola's directory
 
 with open(PATH1+'db.json') as json_file:
     config=json.load(json_file)
@@ -72,7 +72,8 @@ plt.ylabel("Magnitude per event")
 plt.title("Events' Magnitude Measurements for Today")
 for i in range(max_len):
     plt.bar(keys, [pt[i] for pt in magnitudes_], width=len(magnitudes_)/8.0, edgecolor='black')
-plt.savefig("/home/paola/Documents/"+ dating) #Also Paola's directory
+
+plt.savefig("/home/vdelaluz/public_html/gicc/static/cursos/2020-II/eonet/"+ dating) #Also Paola's directory
 
 
 '''''
@@ -90,4 +91,4 @@ fig.savefig("/home/paola/Documents/"+ dating) #Also Paola's directory
 '''''
 
 
-subprocess.run(["scp",PATH1 + dating,"paolagh@132.247.186.67:public_html/static/"])
+#subprocess.run(["scp",PATH1 + dating,"paolagh@132.247.186.67:public_html/static/"])

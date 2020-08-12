@@ -11,9 +11,9 @@ from datetime import datetime
 import os
 #_______________*_____________________
 
-PATH1 = "/home/paola/Documents/" #Paola's directory
+PATH1 = "/home/vdelaluz/git/Distributed-Computing-ENES-UNAM/" #Paola's directory
 #PATH2 = "paolagh@132.247.186.67:public_html/static/"
-PATH2 = "/home/paola/Documents/Distributed-Computing-ENES-UNAM/" #Paola's directory
+PATH2 = PATH1+"/backup/" #Paola's directory
 
 with open(PATH1+'db.json') as json_file:
 	config=json.load(json_file)
